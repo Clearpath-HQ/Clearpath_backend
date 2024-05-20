@@ -1,0 +1,11 @@
+django==5.0.3
+pillow==10.3.0
+djangorestframework
+djangorestframework-simplejwt
+pyyaml
+requests
+django-cors-headers
+python-dotenv
+django-filter
+django-nextjs
+markdown
