@@ -6,7 +6,7 @@ ClearPath is a web Project Management tool to help Project Management Profession
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Contributing (Optional)](#contributing)
+* [Read Me](#read-me)
 * [Installation-MacOs](#installation-macos)
 * [Installation-Windows](#installation-windows)
 * [Continue](#continue)
@@ -34,11 +34,9 @@ Here's how to use the project functionalities:
 
 * ... (instructions with code snippets or screenshots)
 
-## Contributing
+## Read Me
 
-We welcome contributions to this project! Here's how you can get involved:
-
-* Below are contribution guidelines to follow:
+* Read this instructions carefully:
 
 ## Installation-MacOS
 
