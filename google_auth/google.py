@@ -11,11 +11,25 @@ class Google:
         Validate method queries the Google OAuth2 API to fetch the user info
         """
         try:
-            # Allow a small clock skew of 2 seconds
             idinfo = id_token.verify_oauth2_token(auth_token, requests.Request(), clock_skew_in_seconds=5)
-            if 'accounts.google.com' in idinfo['iss']:
-                print(f"Token validated successfully: {idinfo}")  # Debugging log
-                return idinfo
-        except Exception as e:
-            print(f"Token validation error: {e}")  # Debugging log
+
+            # Acceptable issuer URLs
+            valid_issuers = [
+                'https://accounts.google.com',
+                'accounts.google.com'
+            ]
+
+            # matching value issuers
+            if idinfo['iss'] not in valid_issuers:
+                raise serializers.ValidationError('Invalid token issuer.')
+
+            print(f"Token validated successfully: {idinfo}") 
+            return idinfo
+
+        except ValueError as ve:
             raise serializers.ValidationError('The token is either invalid or has expired.')
+
+        except Exception as e:
+            # error handling
+            print(f"Token validation error: {e}")  
+            raise serializers.ValidationError('An error occurred during token validation.')
