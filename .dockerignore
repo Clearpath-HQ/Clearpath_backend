@@ -1,0 +1,20 @@
+# General Exclusions
+.git
+.env
+__pycache__
+*.pyc
+.DS_Store
+.vscode
+.idea
+
+# Django Specific Exclusions
+staticfiles/*
+mediafiles/*
+
+# Virtual Environments
+env/
+venv/
+
+# Build and Log Files
+*.log
+node_modules
