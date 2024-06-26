@@ -7,7 +7,6 @@ env:
   NGINX_IMAGE: ghcr.io/$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')/nginx
 
 jobs:
-
   build:
     name: Build Docker Images
     runs-on: ubuntu-latest
